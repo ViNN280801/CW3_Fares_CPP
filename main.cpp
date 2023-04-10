@@ -72,7 +72,7 @@ std::vector<std::pair<int, int>> getSummaryStatistics(size_t const &rows, size_t
 
     ShellSort shs;
     shs.sort(v);
-    printMatrix(v, "\nAfter shell sort: ");
+    printMatrix(v, "\nAfter Shell sort: ");
     shs.printStatistics();
     std::pair<int, int> shsStat{shs.getStatistics()};
     stats.push_back(shsStat);
@@ -89,7 +89,7 @@ std::vector<std::pair<int, int>> getSummaryStatistics(size_t const &rows, size_t
     return stats;
 }
 
-constexpr bool isNumInSeq(int const &k, int const &numToFind, size_t const &range = RANGE_TO_FIND)
+bool isNumInSeq(int const &k, int const &numToFind, size_t const &range = RANGE_TO_FIND)
 {
     // Our sequence described as following: a_n = 6*n - k (where k is 5, 4, 3, ..., 1)
     arrInt arr;
