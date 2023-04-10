@@ -50,13 +50,11 @@ $ cmake .
 -- Configuring done (0.7s)
 -- Generating done (0.0s)
 -- Build files have been written to: $PATH
-
 $ cmake --build .
 [ 33%] Building CXX object CMakeFiles/main.dir/sort.cpp.o
 [ 66%] Building CXX object CMakeFiles/main.dir/main.cpp.o
 [100%] Linking CXX executable main
 [100%] Built target main
-
 $
 ```
 
@@ -97,107 +95,77 @@ There is some examples of sorting methods with 1 matrix and summarize results in
 #### Original matrix
 
 ```
-Original matrix:
-48	52	57	60	20	23	100	89	41
-87	79	52	7	79	71	92	30	46
-70	39	89	59	70	43	53	90	70
-93	9	84	34	8	87	42	68	6
-65	67	47	5	53	77	8	11	55
-79	2	36	76	72	26	17	30	95
-11	34	85	81	26	93	64	59	100
-50	53	67	7	17	85	5	73	37
-81	81	99	87	11	1	22	38	72
-99	54	53	94	65	38	30	97	63
+Original matrix: 
+49	41	46	14	71	98	
+92	82	45	25	11	55	
+46	53	39	88	22	11	
+99	87	42	50	96	34	
+32	37	30	29	68	27
 ```
 
 #### Bubble sort
 
 ```
-After bubble sort:
-1	2	5	5	6	7	7	8	8
-9	11	11	11	17	17	20	22	23
-26	26	30	30	30	34	34	36	37
-38	38	39	41	42	43	46	47	48
-50	52	52	53	53	53	53	54	55
-57	59	59	60	63	64	65	65	67
-67	68	70	70	70	71	72	72	73
-76	77	79	79	79	81	81	81	84
-85	85	87	87	87	89	89	90	92
-93	93	94	95	97	99	99	100	100
-Count of compares: 1522
-Count of substitutions: 1522
+After bubble sort: 
+11	11	14	22	25	27	
+29	30	32	34	37	39	
+41	42	45	46	46	49	
+50	53	55	68	71	82	
+87	88	92	96	98	99	
+Count of compares: 276
+Count of substitutions: 276
 ```
 
 #### Selection sort
 
 ```
-After insertion sort:
-1	2	5	5	6	7	7	8	8
-9	11	11	11	17	17	20	22	23
-26	26	30	30	30	34	34	36	37
-38	38	39	41	42	43	46	47	48
-50	52	52	53	53	53	53	54	55
-57	59	59	60	63	64	65	65	67
-67	68	70	70	70	71	72	72	73
-76	77	79	79	79	81	81	81	84
-85	85	87	87	87	89	89	90	92
-93	93	94	95	97	99	99	100	100
-Count of compares: 1974
-Count of substitutions: 89
+After selection sort: 
+11	11	14	22	25	27	
+29	30	32	34	37	39	
+41	42	45	46	46	49	
+50	53	55	68	71	82	
+87	88	92	96	98	99	
+Count of compares: 69
+Count of substitutions: 30
 ```
 
 #### Insertion sort
 
 ```
-After insertion sort:
-1	2	5	5	6	7	7	8	8
-9	11	11	11	17	17	20	22	23
-26	26	30	30	30	34	34	36	37
-38	38	39	41	42	43	46	47	48
-50	52	52	53	53	53	53	54	55
-57	59	59	60	63	64	65	65	67
-67	68	70	70	70	71	72	72	73
-76	77	79	79	79	81	81	81	84
-85	85	87	87	87	89	89	90	92
-93	93	94	95	97	99	99	100	100
-Count of compares: 1974
-Count of substitutions: 89
+After insertion sort: 
+11	11	14	22	25	27	
+29	30	32	34	37	39	
+41	42	45	46	46	49	
+50	53	55	68	71	82	
+87	88	92	96	98	99	
+Count of compares: 248
+Count of substitutions: 29
 ```
 
 #### Shell sort
 
 ```
-After Shell sort:
-1	2	5	5	6	7	7	8	8
-9	11	11	11	17	17	20	22	23
-26	26	30	30	30	34	34	36	37
-38	38	39	41	42	43	46	47	48
-50	52	52	53	53	53	53	54	55
-57	59	59	60	63	64	65	65	67
-67	68	70	70	70	71	72	72	73
-76	77	79	79	79	81	81	81	84
-85	85	87	87	87	89	89	90	92
-93	93	94	95	97	99	99	100	100
-Count of compares: 307
-Count of substitutions: 540
+After Shell sort: 
+11	11	14	22	25	27	
+29	30	32	34	37	39	
+41	42	45	46	46	49	
+50	53	55	68	71	82	
+87	88	92	96	98	99	
+Count of compares: 67
+Count of substitutions: 120
 ```
 
 #### Quick sort
 
 ```
-After quick sort:
-1	2	5	5	6	7	7	8	8
-9	11	11	11	17	17	20	22	23
-26	26	30	30	30	34	34	36	37
-38	38	39	41	42	43	46	47	48
-50	52	52	53	53	53	53	54	55
-57	59	59	60	63	64	65	65	67
-67	68	70	70	70	71	72	72	73
-76	77	79	79	79	81	81	81	84
-85	85	87	87	87	89	89	90	92
-93	93	94	95	97	99	99	100	100
-Count of compares: 253
-Count of substitutions: 173
+After quick sort: 
+11	11	14	22	25	27	
+29	30	32	34	37	39	
+41	42	45	46	46	49	
+50	53	55	68	71	82	
+87	88	92	96	98	99	
+Count of compares: 73
+Count of substitutions: 47
 ```
 
 Sorting was also done with others matrix which sizes was (2x2, 3x3, 5x4, 5x5, 5x6, 7x7, 8x9, 10x9, 10x10). Below is presented performance table which is show how many compares and substitutions did take any one sorting method or another.
