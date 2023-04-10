@@ -269,21 +269,3 @@ void QuickSort::sort(matrixInt &matrix)
 void QuickSort::printStatistics() { ISort::printStatistics(); }
 
 std::pair<int, int> QuickSort::getStatistics() const { return ISort::getStatistics(); }
-
-/* std::cout
-        << std::setw(91) << std::setfill('-')
-        << "\n|" << std::setw(12) << std::setfill(' ') << "Matrix size" << std::setw(2) << std::setfill(' ') << '|'
-        << std::setw(12) << std::setfill(' ') << "Bubble sort" << std::setw(2) << std::setfill(' ') << '|'
-        << std::setw(15) << std::setfill(' ') << "Selection sort" << std::setw(2) << std::setfill(' ') << '|'
-        << std::setw(15) << std::setfill(' ') << "Insertion sort" << std::setw(2) << std::setfill(' ') << '|'
-        << std::setw(11) << std::setfill(' ') << "Shell sort" << std::setw(2) << std::setfill(' ') << '|'
-        << std::setw(11) << std::setfill(' ') << "Quick sort" << std::setw(2) << std::setfill(' ') << " |\n"
-        << std::setw(90) << std::setfill('-') << '\n'
-        << '|' << std::setw(14) << std::setfill(' ') << '|'
-        << "Comps" << std::setw(4) << std::setfill(' ') << ' ' << "Subs" << '|'
-        << "Comps" << std::setw(7) << std::setfill(' ') << ' ' << "Subs" << '|'
-        << "Comps" << std::setw(7) << std::setfill(' ') << ' ' << "Subs" << '|'
-        << "Comps" << std::setw(3) << std::setfill(' ') << ' ' << "Subs" << '|'
-        << "Comps" << std::setw(2) << std::setfill(' ') << ' ' << "Subs"
-        << " |\n"
-        << '|' << std::setw(14) << std::setfill(' ') << '|'; */
