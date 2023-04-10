@@ -170,5 +170,111 @@ int main()
 
     printSummaryStatistics(res);
 
+    size_t rows{}, cols{};
+    std::cout << "\nEnter count of rows and columns of matrix: ";
+    std::cin >> rows >> cols;
+    matrixInt matrix(fillMatrixRandom(rows, cols)), matrixCopy{matrix};
+
+    printMatrix(matrix, "Original matrix: ");
+    // Arrange each even row in ascending order, then each even column in ascending order
+    for (size_t row{}; row < matrix.size(); row++)
+    {
+        for (size_t col{}; col < matrix.at(row).size(); col++)
+        {
+            if (row % 2 == 0)
+            {
+                size_t minCol{col};
+                int min{matrix.at(row).at(col)};
+
+                for (size_t j{col + 1}; j < matrix.at(row).size(); j++)
+                {
+                    if (matrix.at(row).at(j) < min)
+                    {
+                        minCol = j;
+                        min = matrix.at(row).at(j);
+                    }
+                }
+                matrix.at(row).at(minCol) = matrix.at(row).at(col);
+                std::swap(matrix.at(row).at(col), min);
+            }
+        }
+    }
+    printMatrix(matrix, "\nAfter sorting all even rows by ascending order: ");
+    matrix = matrixCopy;
+
+    printMatrix(matrix, "\nOriginal matrix: ");
+    for (size_t row{}; row < matrix.size(); row++)
+    {
+        for (size_t col{}; col < matrix.at(row).size(); col++)
+        {
+            if (col % 2 == 0)
+            {
+                size_t minRow{row};
+                int min{matrix.at(row).at(col)};
+
+                for (size_t j{row + 1}; j < matrix.size(); j++)
+                {
+                    if (matrix.at(j).at(col) < min)
+                    {
+                        minRow = j;
+                        min = matrix.at(j).at(col);
+                    }
+                }
+                matrix.at(minRow).at(col) = matrix.at(row).at(col);
+                std::swap(matrix.at(row).at(col), min);
+            }
+        }
+    }
+    printMatrix(matrix, "\nAfter sorting all even columns by ascending order: ");
+    matrix = matrixCopy;
+
+    printMatrix(matrix, "\nOriginal matrix: ");
+    std::cout << "Sort all even rows in ascending order, then sort even cols in asending order in one operation\n";
+    for (size_t row{}; row < matrix.size(); row++)
+    {
+        for (size_t col{}; col < matrix.at(row).size(); col++)
+        {
+            if (row % 2 == 0)
+            {
+                size_t minCol{col};
+                int min{matrix.at(row).at(col)};
+
+                for (size_t j{col + 1}; j < matrix.at(row).size(); j++)
+                {
+                    if (matrix.at(row).at(j) < min)
+                    {
+                        minCol = j;
+                        min = matrix.at(row).at(j);
+                    }
+                }
+                matrix.at(row).at(minCol) = matrix.at(row).at(col);
+                std::swap(matrix.at(row).at(col), min);
+            }
+        }
+    }
+    for (size_t row{}; row < matrix.size(); row++)
+    {
+        for (size_t col{}; col < matrix.at(row).size(); col++)
+        {
+            if (col % 2 == 0)
+            {
+                size_t minRow{row};
+                int min{matrix.at(row).at(col)};
+
+                for (size_t j{row + 1}; j < matrix.size(); j++)
+                {
+                    if (matrix.at(j).at(col) < min)
+                    {
+                        minRow = j;
+                        min = matrix.at(j).at(col);
+                    }
+                }
+                matrix.at(minRow).at(col) = matrix.at(row).at(col);
+                std::swap(matrix.at(row).at(col), min);
+            }
+        }
+    }
+    printMatrix(matrix, "\nAfter sorting all even rows and all even columns by ascending order: ");
+
     return EXIT_SUCCESS;
 }
